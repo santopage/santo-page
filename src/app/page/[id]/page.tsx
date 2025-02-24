@@ -35,7 +35,7 @@ interface PageData {
 
 export default function Page() {
   const params = useParams();
-  const [currentStep, setCurrentStep] = useState(37);
+  const currentStep = 37;
   const [pageData, setPageData] = useState<PageData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -145,12 +145,6 @@ export default function Page() {
             {/* Informações do Santo */}
             <div className="flex items-center space-x-4">
               <div className="w-16 h-16 relative">
-                <img
-                  src={pageData.saint.image_url}
-                  alt={pageData.saint.name}
-                  fill
-                  className="object-cover w-16 h-16 rounded-full"
-                />
               </div>
               <div>
                 <p className="text-lg font-medium text-white">{pageData.saint.name}</p>

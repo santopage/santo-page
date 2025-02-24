@@ -39,11 +39,6 @@ export function SaintsPreview({ saints, onValueChange }: SaintsPreviewProps) {
                   htmlFor={saint.slug}
                   className="flex flex-col text-center items-center justify-between rounded-md border-2 border-muted hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                 >
-                  <img
-                    src={saint.image}
-                    alt={saint.name}
-                    className="w-full h-48 object-cover"
-                  />
                   <p className="px-2 text-primary text-sm py-2 font-semibold">{saint.name}</p>
                 </Label>
               </div>
